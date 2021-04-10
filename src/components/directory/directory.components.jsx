@@ -90,11 +90,6 @@ class Directory extends React.Component {
           <MenuItem clickEvent={() => this.setState({ButtonPopup: {trigger: true}}) }key={id} title={title} imageUrl={imageUrl} />
         ))}
         {this.state.ButtonPopup.trigger ? <Popup trigger={this.state.ButtonPopup} /> : null}
-        
-        <button onClick={()=> {
-          this.setState({ButtonPopup: {trigger: true}});
-          console.log(this.state.ButtonPopup.trigger);
-        }}>Popup</button>
       </div>
     );
   }
