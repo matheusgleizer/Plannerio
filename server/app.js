@@ -11,7 +11,7 @@ const app = express();
 const PORT = process.env.PORT;
 
 // Middlewares
-app.use(express.static(path.join(__dirname, "../public/build")));
+app.use(express.static(path.join(__dirname, "build")));
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(cookieParser());
