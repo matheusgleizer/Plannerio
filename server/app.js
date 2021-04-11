@@ -5,6 +5,7 @@ const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
 const path = require("path");
 const userRoutes = require("./routes/userRoutes");
+const mailRoute = require("./routes/mailRoute");
 
 // Setting up app and PORT
 const app = express();
@@ -28,3 +29,4 @@ mongoose
 
 // Routes
 app.use(userRoutes);
+app.use(mailRoute);
