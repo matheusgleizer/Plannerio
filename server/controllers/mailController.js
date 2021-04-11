@@ -25,7 +25,7 @@ module.exports.sendMail = async (req, res) => {
 			to: process.env.EMAIL_USER,
 			replyTo: email,
 			subject: subject,
-			text: message,
+			text: `Message send by: ${name} - ${email} \n\n ${message}`,
 		});
 
 		res.status(200).json({message: "Message sent!"});
